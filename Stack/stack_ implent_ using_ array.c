@@ -82,11 +82,6 @@ int main()
         push(sp,random);
     }
 
-   /* push(sp,10);
-    push(sp,11);
-    push(sp,12);
-    push(sp,13);
-*/
    for(int i=0;i<num;i++){
 
     printf("%d popped from stack\n",pop(sp));

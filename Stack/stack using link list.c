@@ -93,7 +93,7 @@ int main(){
 
     top = push(top, 8);
 
-    // linkedListTraversal(top);
+    linkedListTraversal(top);
 
     int element = pop(top);
 

@@ -76,5 +76,6 @@ int main()
 
         printf("The value at position %d is %d\n",j,peek(sp,j));
     }
+    return 0;
 }
 

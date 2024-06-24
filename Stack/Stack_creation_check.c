@@ -40,8 +40,6 @@ int main()
 
     s->arra=(int *)malloc(s->size*sizeof(int));
 
-    //for testing
-
     s->arra[0]=7;
 
     s->top++;

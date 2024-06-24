@@ -71,13 +71,11 @@ int main()
     Push(sp,4);
     Push(sp,5);
 
-
     while(!isEmpty(sp)){
 
     printf("Top element of stack now %d\n\n",peek(sp));
 
-    //printf("\n");
    printf("%d is popped from the stack\n",Pop(sp));
-   //printf("%d is popped from the stack\n",Pop(sp));
+
     }
 }
