@@ -7,7 +7,7 @@ using namespace std;
 struct Node
 {
     int data;
-    
+
     struct Node* next;
 };
 struct Node* Head= NULL;
@@ -30,7 +30,7 @@ void Create_linklist(int item)
 
     if(newnode==NULL) {
 
-    cout<<"Memory Alloacation Failed"<<endl;
+    cout<<"Memory Allocation Failed"<<endl;
 
     return;
     }
@@ -87,7 +87,7 @@ int main()
     cout<<"Original Link List : "<<endl;
 
     Traverse();
-    
+
     cout<<"After Reverse Link List : "<<endl;
 
     Reverse_Linklist();

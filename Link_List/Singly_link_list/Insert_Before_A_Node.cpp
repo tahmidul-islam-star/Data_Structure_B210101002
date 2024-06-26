@@ -28,7 +28,7 @@ void Create_Link_list(int data)
 {
     struct Node* Newnode=(struct Node*)malloc(sizeof(struct Node));
 
-    if(Newnode==NULL)    
+    if(Newnode==NULL)
     {
         cout<<"Memory Allocation Failed"<<endl;
 
@@ -58,10 +58,10 @@ struct Node* Searching(int item)
     struct Node* temp= Head;
 
     while(temp != NULL)
-    {    
+    {
         //here i find the location of prev node so that i can insert after a node;
-        
-        if(item==temp->next->data){ 
+
+        if(item==temp->next->data){
 
             return temp;
         }
@@ -75,11 +75,11 @@ void Insert_Before_Node(struct Node* prev_node,int item)
 
     if (prev_node == NULL) {
 
-        cout << "The given previous node cannot be nullptr" << endl;
+        cout << "Cannot insert Before Head" << endl;
 
         return;
     }
-    
+
     ptr->data=item;
 
     ptr->next= prev_node->next;
@@ -104,7 +104,7 @@ int main()
     Traverse();
 
     int value= 2;
-    
+
     //here i find the location prev_node;
 
     // so i can insert as well as after a node same code;
@@ -114,6 +114,6 @@ int main()
     Insert_Before_Node(loc,100);
 
     Traverse();
-    
+
     return 0;
 }

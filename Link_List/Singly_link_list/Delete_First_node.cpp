@@ -26,21 +26,21 @@ void Traverse()
 }
 void Create_Link_list(int data)
 {
-    struct Node* Newnode=(struct Node*)malloc(sizeof(struct Node));
+    struct Node* newnode=(struct Node*)malloc(sizeof(struct Node));
 
-    if(Newnode==NULL)    
+    if(newnode==NULL)
     {
         cout<<"Memory Allocation Failed"<<endl;
 
         return;
     }
-    Newnode->data=data;
+    newnode->data=data;
 
-    Newnode->next=NULL;
+    newnode->next=NULL;
 
     if(Head==NULL){
 
-        Head= Newnode;
+        Head= newnode;
 
         return;
     }
@@ -50,20 +50,20 @@ void Create_Link_list(int data)
     {
         temp =temp->next;
     }
-    temp->next=Newnode;
+    temp->next=newnode;
 
 }
 void Delete_First_Node()
 {
     struct Node* ptr= (struct Node*) malloc(sizeof(struct Node));
 
-    if (Head == NULL) { 
+    if (Head == NULL) {
 
         printf("List is already empty\n");
 
         return;
     }
-    else if (Head->next == NULL) { 
+    else if (Head->next == NULL) {
 
         free(Head);
 
@@ -96,12 +96,12 @@ int main()
     cout<<"Before Deleteing : "<<endl;
 
     Traverse();
-    
+
     Delete_First_Node();
 
     cout<<"After Deleting : "<<endl;
 
     Traverse();
-    
+
     return 0;
 }

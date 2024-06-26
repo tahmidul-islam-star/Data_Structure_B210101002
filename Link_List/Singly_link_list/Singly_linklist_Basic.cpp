@@ -11,7 +11,7 @@ struct Node
 };
 void Traverse(struct Node* ptr)
 {
-    ptr = ptr->next;// To point first node
+    ptr = ptr->next;
 
     while(ptr !=NULL)
     {
@@ -50,6 +50,6 @@ int main()
     third->next=NULL;
 
     Traverse(Head);
-    
+
     return 0;
 }

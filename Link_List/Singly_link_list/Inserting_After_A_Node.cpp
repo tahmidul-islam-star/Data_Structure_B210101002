@@ -28,7 +28,7 @@ void Create_Link_list(int data)
 {
     struct Node* Newnode=(struct Node*)malloc(sizeof(struct Node));
 
-    if(Newnode==NULL)    
+    if(Newnode==NULL)
     {
         cout<<"Memory Allocation Failed"<<endl;
 
@@ -67,22 +67,15 @@ struct Node* Searching(int item)
     }
     return NULL;
 }
-void Insert_After_Node(struct Node* prev_node,int item)
+void Insert_After_Node(struct Node* loc,int item)
 {
     struct Node* ptr= (struct Node*)malloc(sizeof(struct Node));
 
-    if (prev_node == NULL) {
-
-        cout << "The given previous node cannot be nullptr" << endl;
-
-        return;
-    }
-    
     ptr->data=item;
 
-    ptr->next= prev_node->next;
+    ptr->next= loc->next;
 
-    prev_node->next= ptr;
+    loc->next= ptr;
 
 }
 int main()
@@ -105,9 +98,15 @@ int main()
 
     struct Node* loc= Searching(value);
 
+    if(loc== NULL) cout<<"This node is note exist"<<endl;
+
+    else{
+
     Insert_After_Node(loc,100);
 
+    }
+
     Traverse();
-    
+
     return 0;
 }

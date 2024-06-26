@@ -33,7 +33,7 @@ struct Node* getNode()
 void Insert_At_First(int value)
 {
     struct Node* Newnode= getNode();
-    
+
     if(Newnode== NULL) {
 
         cout<<"Memory Allocation Failed"<<endl;
@@ -61,28 +61,10 @@ struct Node* Searching(int item)
     }
     return NULL;
 }
-void Insert_Given_Node(struct Node* loc,int key)
+void Replace(struct Node* loc,int key)
 {
-    struct Node* newnode=getNode();
+         loc->data= key;
 
-    if(loc==NULL){
-
-        newnode->data=key;
-
-        newnode->next=Head;
-
-        Head=newnode;
-        
-    }
-    else{
-
-        newnode->data=key;
-
-        newnode->next=loc->next;
-
-        loc->next=newnode;
-
-    }
 }
 int main()
 {
@@ -100,7 +82,7 @@ int main()
 
     else cout<<value<<" is found at location : "<<Loc<<endl;
 
-    Insert_Given_Node(Loc,99);
+    Replace(Loc,99);
 
     Traverse();
 

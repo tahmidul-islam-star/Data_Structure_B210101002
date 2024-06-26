@@ -26,21 +26,21 @@ void Traverse()
 }
 void Create_Link_list(int data)
 {
-    struct Node* Newnode=(struct Node*)malloc(sizeof(struct Node));
+    struct Node* newnode=(struct Node*)malloc(sizeof(struct Node));
 
-    if(Newnode==NULL)    
+    if(newnode==NULL)
     {
         cout<<"Memory Allocation Failed"<<endl;
 
         return;
     }
-    Newnode->data=data;
+    newnode->data=data;
 
-    Newnode->next=NULL;
+    newnode->next=NULL;
 
     if(Head==NULL){
 
-        Head= Newnode;
+        Head= newnode;
 
         return;
     }
@@ -50,7 +50,7 @@ void Create_Link_list(int data)
     {
         temp =temp->next;
     }
-    temp->next=Newnode;
+    temp->next=newnode;
 
 }
 struct Node* Searching(int item)
@@ -58,10 +58,10 @@ struct Node* Searching(int item)
     struct Node* temp= Head;
 
     while(temp != NULL)
-    {    
-        //Traverse second last loacation node
+    {
+        //Traverse second last location node
 
-        if(item==temp->next->data){ 
+        if(item==temp->next->data){
 
             return temp;
         }
@@ -72,8 +72,6 @@ struct Node* Searching(int item)
 void Delete_Before_loc_Node(struct Node* position)
 {
 
-    struct Node* ptr= (struct Node*) malloc(sizeof(struct Node));   
-    
     struct Node* temp = Head;
 
     while (temp != NULL && temp->next != position) {
@@ -89,7 +87,7 @@ void Delete_Before_loc_Node(struct Node* position)
 
         free(p);
 
-        } 
+        }
 
 }
 
@@ -110,14 +108,14 @@ int main()
     Traverse();
 
     int value= 2;
-    
+
     struct Node* loc= Searching(value);
 
     if(loc ==NULL)
     {
         cout<<"This node is not found"<<endl;
     }
-    
+
     else if( loc == Head){
 
         cout << "No node to exist Before the given node." << endl;
