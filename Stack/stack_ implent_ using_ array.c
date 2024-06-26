@@ -1,4 +1,3 @@
-#include<limits.h>
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -11,7 +10,7 @@ struct stack
     int *arra;
 
 };
-struct stack* createstack(unsigned size)
+struct stack* createstack(int size)
 {
     struct stack * stack=(struct stack*)malloc(sizeof(struct stack));
 
