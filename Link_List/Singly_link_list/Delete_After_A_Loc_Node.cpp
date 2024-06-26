@@ -26,21 +26,21 @@ void Traverse()
 }
 void Create_Link_list(int data)
 {
-    struct Node* Newnode=(struct Node*)malloc(sizeof(struct Node));
+    struct Node* newnode=(struct Node*)malloc(sizeof(struct Node));
 
-    if(Newnode==NULL)    
+    if(newnode==NULL)
     {
         cout<<"Memory Allocation Failed"<<endl;
 
         return;
     }
-    Newnode->data=data;
+    newnode->data=data;
 
-    Newnode->next=NULL;
+    newnode->next=NULL;
 
     if(Head==NULL){
 
-        Head= Newnode;
+        Head= newnode;
 
         return;
     }
@@ -50,7 +50,7 @@ void Create_Link_list(int data)
     {
         temp =temp->next;
     }
-    temp->next=Newnode;
+    temp->next=newnode;
 
 }
 struct Node* Searching(int item)
@@ -58,9 +58,9 @@ struct Node* Searching(int item)
     struct Node* temp= Head;
 
     while(temp != NULL)
-    {    
-        
-        if(item==temp->data){ 
+    {
+
+        if(item==temp->data){
 
             return temp;
         }
@@ -70,15 +70,13 @@ struct Node* Searching(int item)
 }
 void Delete_After_loc_Node(struct Node* position)
 {
-    struct Node* ptr= (struct Node*) malloc(sizeof(struct Node));   
-    
     struct Node* temp = position->next;
 
     position->next= temp->next;
 
     free(temp);
 
-} 
+}
 
 int main()
 {
@@ -97,7 +95,7 @@ int main()
     Traverse();
 
     int value= 2;
-    
+
     struct Node* loc= Searching(value);
 
     if(loc == NULL ){
@@ -116,7 +114,6 @@ int main()
     cout<<"Deleting after "<<loc<<" node : "<<endl;
 
     Traverse();
-
 
     }
 
