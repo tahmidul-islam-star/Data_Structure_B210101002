@@ -26,7 +26,9 @@ void Push(struct stack*ptr,int value)
     if(isFull(ptr)) printf("Stack overflow\n");
 
     else{
+
          ptr->top++;
+
          ptr->arra[ptr->top]=value;
     }
 }
@@ -37,6 +39,7 @@ int Pop(struct stack*ptr){
    else{
 
     int temp =ptr->arra[ptr->top];
+
      ptr-> top--;
 
      return temp;
@@ -61,21 +64,19 @@ int main()
     sp->size=10;
 
     sp->top=-1;
+
     sp->arra=(int *)malloc(sp->size*sizeof(int));
 
-    printf("Stack has been created successfully\n");
-
-    Push(sp,1);
-    Push(sp,2);
-    Push(sp,3);
-    Push(sp,4);
-    Push(sp,5);
+   for(int i=0;i<10;i++)
+   {
+       Push(sp,i+2);
+   }
 
     while(!isEmpty(sp)){
 
     printf("Top element of stack now %d\n\n",peek(sp));
 
-   printf("%d is popped from the stack\n",Pop(sp));
+    printf("%d is popped from the stack\n",Pop(sp));
 
     }
 }
