@@ -103,7 +103,6 @@ int main()
             }
         }
     }
-    free(arra1->arra); free(arra2->arra);free(arra1);free(arra2);
 
     return 0;
 }
