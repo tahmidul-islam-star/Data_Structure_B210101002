@@ -6,7 +6,6 @@ using namespace std;
 
 #define endl '\n'
 
-
 struct stak {
 
     int siz;
@@ -22,7 +21,6 @@ void push(struct stak* ptr, int item) {
 
     ptr->arra[ptr->top] = item;
 
-    cout << "Pushed " << item << " onto Stack top "<< endl;
 }
 
 int pop(struct stak* p) {
@@ -47,11 +45,8 @@ int operation(int num1,int num2,char op)
         case '/': return num2/num1;
     }
 }
-
-int main() {
-
-    string s = "5,6,2,+,*,12,4,/-";
-
+int postfix_evaluation(string s)
+{
     struct stak* sp = (struct stak*)malloc(sizeof(struct stak));
 
     sp->siz = s.size();
@@ -90,12 +85,18 @@ int main() {
             push(sp,result);
         }
     }
+    int result= pop(sp);
 
-    cout << "Final result: " << pop(sp) << endl;
+    return result;
+}
 
-    free(sp->arra);
+int main() {
 
-    free(sp);
+    string s = "5,6,2,+,*,12,4,/-";
+
+    int result= postfix_evaluation(s);
+
+    cout << "postfix result: " << result<< endl;
 
     return 0;
 }
