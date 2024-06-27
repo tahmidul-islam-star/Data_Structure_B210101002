@@ -70,18 +70,19 @@ int peek(struct stack* ptr)
 
 int main()
 {
-    struct stack *sp= createstack(100);
 
-    int num;scanf("%d",&num);
+     int num;scanf("%d",&num);
 
-    for(int i=0;i<num;i++){
+     struct stack *sp= createstack(num);
 
-        int random;scanf("%d",&random);
+      for(int i=0;i<num;i++){
 
-        push(sp,random);
+      int random;scanf("%d",&random);
+
+      push(sp,random);
     }
 
-   for(int i=0;i<num;i++){
+     for(int i=0;i<num;i++){
 
     printf("%d popped from stack\n",pop(sp));
 

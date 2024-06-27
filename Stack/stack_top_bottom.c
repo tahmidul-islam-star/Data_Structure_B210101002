@@ -50,7 +50,7 @@ int stakTop(struct stack * ptr){
 
    return ptr->arra[ptr->top];
 }
-int stakB(struct stack* ptr){
+int stakBottom(struct stack* ptr){
 
    return ptr->arra[0];
 }
@@ -74,7 +74,7 @@ int main()
 
     printf("Top most Element is %d\n",stakTop(sp));
 
-    printf("Bottom most Element is %d\n",stakB(sp));
+    printf("Bottom most Element is %d\n",stakBottom(sp));
 
     return 0;
 }

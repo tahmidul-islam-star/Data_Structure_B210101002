@@ -106,7 +106,7 @@ int main()
 
     link(top);
 
-   printf("Value at position at %d is %d\n",0,peek(0));
+   printf("Value at position at %d is %d\n",1,peek(1));
 
 
     return 0;
