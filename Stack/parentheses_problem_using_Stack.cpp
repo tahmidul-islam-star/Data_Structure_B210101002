@@ -35,14 +35,9 @@ void pop(struct stak* ptr) {
     }
     ptr->top--;
 }
-
-int main() {
-
-    string s;
-
-    cin >> s;
-
-    struct stak* sp = (struct stak*)malloc(sizeof(struct stak));
+bool Check(string s)
+{
+     struct stak* sp = (struct stak*)malloc(sizeof(struct stak));
 
     sp->siz = s.size();
 
@@ -72,19 +67,24 @@ int main() {
             }
         }
     }
-
     if (balanced && isEmpty(sp)) {
 
-        cout << "Yes" << endl;
+        return true;
 
     } else {
 
-        cout << "No" << endl;
+       return false;
     }
+}
+int main() {
 
-    free(sp->arra);
+    string s; cin >> s;
 
-    free(sp);
+   bool ans= Check(s);
+
+  if(ans) cout<<"Yes"<<endl;
+
+  else cout<<"NO"<<endl;
 
     return 0;
 }
