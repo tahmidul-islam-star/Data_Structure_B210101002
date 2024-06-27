@@ -52,20 +52,11 @@ int prec(char c) {
     else if (c == '+' || c == '-') return 1;
 
     else return 0;
-
-}
-char associat(char c) {
-
-    if (c == '^') return 'R';
-
-    else return 'L';
 }
 
-int main() {
-
-    string infix = "a+b*(c^d-e)^(f+g*h)-i";
-
-    struct stak* sp = (struct stak*)malloc(sizeof(struct stak));
+void infix_to_postfix(string infix)
+{
+     struct stak* sp = (struct stak*)malloc(sizeof(struct stak));
 
     sp->siz = infix.size();
 
@@ -93,24 +84,27 @@ int main() {
 
         } else {
 
-            while (!Empty(sp) && prec(infix[i]) <= prec(stakTop(sp)) && associat(infix[i]) == 'L') {
+            while (!Empty(sp) && prec(infix[i]) <= prec(stakTop(sp))) {
 
                 postfix += pop(sp);
             }
             push(sp, infix[i]); // higher precedence
         }
     }
-
     while (!Empty(sp)) {
 
         postfix += pop(sp);
     }
 
-    cout << postfix << endl;
+}
 
-    free(sp->arra);
+int main() {
 
-    free(sp);
+    string infix = "a+b*(c^d-e)^(f+g*h)-i";
+
+    infix_to_postfix(infix);
+
+    cout<<postfix<<endl;
 
     return 0;
 }
