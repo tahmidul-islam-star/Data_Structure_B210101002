@@ -26,7 +26,9 @@ void Push(struct stack*ptr,int value)
     if(isFull(ptr)) printf("Stack overflow\n");
 
     else{
+
          ptr->top++;
+
          ptr->arra[ptr->top]=value;
     }
 }
@@ -37,21 +39,13 @@ int Pop(struct stack*ptr){
    else{
 
     int temp =ptr->arra[ptr->top];
+
      ptr-> top--;
 
      return temp;
    }
 }
-int peek(struct stack* ptr,int pos){
 
-
-    if(ptr->top-pos+1<0) printf("Not a valid position\n");
-
-    else{
-
-       return ptr->arra[ptr->top-pos+1];
-    }
-}
 int stakTop(struct stack * ptr){
 
    return ptr->arra[ptr->top];
@@ -68,16 +62,15 @@ int main()
     sp->size=10;
 
     sp->top=-1;
+
     sp->arra=(int *)malloc(sp->size*sizeof(int));
 
-    printf("Stack has been created successfully\n");
+    int n= 10;
 
-    Push(sp,1);
-    Push(sp,2);
-    Push(sp,3);
-    Push(sp,4);
-    Push(sp,5);
-    Push(sp,12);
+    while(n--)
+    {
+        Push(sp,n);
+    }
 
     printf("Top most Element is %d\n",stakTop(sp));
 
