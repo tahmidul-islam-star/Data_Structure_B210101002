@@ -48,10 +48,6 @@ int main()
 
     else {printf("The stack is not empty\n");}
 
-
-    free(s->arra);
-    free(s);
-
     return 0;
 
 }
