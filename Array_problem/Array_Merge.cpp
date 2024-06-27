@@ -57,7 +57,7 @@ void Tahmid(int arra[],int n)
     {
         cout<<arra[i]<<" ";
     }
-    cout<<arra[n-1]<<endl;// avoid to print last space 
+    cout<<arra[n-1]<<endl;// avoid to print last space
 
 }
 
