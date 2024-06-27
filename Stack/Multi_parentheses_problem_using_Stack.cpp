@@ -3,6 +3,7 @@
 #include<cstring>
 
 using namespace std;
+
 #define improve ios_base::sync_with_stdio(0),cin.tie(0),cout.tie(0)
 #define endl '\n'
 
@@ -46,10 +47,8 @@ bool matching(char a,char b)
 
     else return false;
 }
-int main()
+bool Check(string s)
 {
-    string s;cin>>s;
-
     bool p= true;
 
     struct stak * sp= (struct stak*) malloc(sizeof(struct stak));
@@ -87,11 +86,21 @@ int main()
 
             }
 
-           }
+        }
     }
-    if(p and isEmpty(sp)) cout<<"Yes"<<endl;
+    if(p and isEmpty(sp)) return true;
 
-    else cout<<"No"<<endl;
+    else return false;
+}
+int main()
+{
+    string s;cin>>s;
+
+    bool ans=Check(s);
+
+    if(ans) cout<<"YES"<<endl;
+
+    else cout<<"NO"<<endl;
 
     return 0;
 }
