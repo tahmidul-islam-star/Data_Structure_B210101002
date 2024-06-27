@@ -14,10 +14,11 @@ void linkedListTraversal(struct Node *ptr)
 {
     while (ptr != NULL)
     {
-        printf("Element: %d\n", ptr->data);
+        printf("%d -> ", ptr->data);
 
         ptr = ptr->next;
     }
+    printf("NULL");
 }
 
 int isEmpty(struct Node* top){
@@ -87,6 +88,7 @@ int pop(struct Node* tp){
 }
 
 int main(){
+
     top = push(top, 78);
 
     top = push(top, 7);
@@ -97,7 +99,7 @@ int main(){
 
     int element = pop(top);
 
-    printf("Popped element is %d\n", element);
+    printf("\nPopped element is %d\n", element);
 
     linkedListTraversal(top);
 
