@@ -106,11 +106,7 @@ int main()
 
     link(top);
 
-  printf("Value at position at %d is %d\n",0,peek(0));
-
-  printf("Value at top most position is %d\n",Top());
-
-  printf("value at Bottom in Stack is %d \n",Bottom(top));
+   printf("Value at position at %d is %d\n",0,peek(0));
 
 
     return 0;
