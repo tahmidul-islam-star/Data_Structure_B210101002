@@ -60,7 +60,7 @@ int pop(struct stack* ptr)
 }
 int peek(struct stack* ptr)
 {
-    if(isEmpty(ptr)) return INT_MIN;
+    if(isEmpty(ptr)) return -1;
 
     else{
 
@@ -70,7 +70,6 @@ int peek(struct stack* ptr)
 
 int main()
 {
-
      int num;scanf("%d",&num);
 
      struct stack *sp= createstack(num);
@@ -84,7 +83,7 @@ int main()
 
      for(int i=0;i<num;i++){
 
-    printf("%d popped from stack\n",pop(sp));
+    printf("%d popped\n",pop(sp));
 
    }
   return 0;

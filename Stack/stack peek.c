@@ -79,4 +79,5 @@ int main()
     printf("%d is popped from the stack\n",Pop(sp));
 
     }
+    return 0;
 }

@@ -7,10 +7,9 @@ struct Node{
 
     struct Node * next;
 };
-
 struct Node* top = NULL;
 
-void linkedListTraversal(struct Node *ptr)
+void Traverse(struct Node *ptr)
 {
     while (ptr != NULL)
     {
@@ -20,7 +19,6 @@ void linkedListTraversal(struct Node *ptr)
     }
     printf("NULL");
 }
-
 int isEmpty(struct Node* top){
 
     if (top==NULL){
@@ -32,7 +30,6 @@ int isEmpty(struct Node* top){
         return 0;
     }
 }
-
 int isFull(struct Node* top){
 
     struct Node* p = (struct Node*)malloc(sizeof(struct Node));
@@ -89,19 +86,19 @@ int pop(struct Node* tp){
 
 int main(){
 
-    top = push(top, 78);
-
-    top = push(top, 7);
-
     top = push(top, 8);
 
-    linkedListTraversal(top);
+    top = push(top, 71);
+
+    top = push(top, 80);
+
+    Traverse(top);
 
     int element = pop(top);
 
-    printf("\nPopped element is %d\n", element);
+    printf("\n%d is popped \n", element);
 
-    linkedListTraversal(top);
+    Traverse(top);
 
     return 0;
 }
