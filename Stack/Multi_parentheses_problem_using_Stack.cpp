@@ -29,13 +29,11 @@ void pus(struct stak* ptr,char c)
 }
 char pop(struct stak *p)
 {
-
         char temp = p->arra[p->top];
 
         p->top--;
 
         return temp;
-
 }
 bool matching(char a,char b)
 {
@@ -61,15 +59,15 @@ bool Check(string s)
 
     for(int i=0;i<s.size();i++){
 
-        if(s[i]=='(' || s[i]=='{' || s[i]=='['){
+           if(s[i]=='(' || s[i]=='{' || s[i]=='['){
 
             pus(sp,s[i]);
            }
            else if(s[i]==')' || s[i]=='}' || s[i]==']'){
 
-            if(isEmpty(sp)) {
+              if(isEmpty(sp)) {
 
-                p= false;
+               p= false;
 
                 break;
             }
@@ -77,15 +75,13 @@ bool Check(string s)
 
                 char ch= pop(sp);
 
-                if(!matching(ch,s[i])){
+                 if(!matching(ch,s[i])){
 
-                    p= false;
+                p= false;
 
-                    break;
+                break;
                 }
-
             }
-
         }
     }
     if(p and isEmpty(sp)) return true;
