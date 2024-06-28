@@ -28,8 +28,7 @@ void Tower_of_Hanoi(int n, char Beg, char Aux, char End)
 }
 bool Check(int n,int total)
 {
-    // equation: from book page number 6.25
-   // f(n) = 2^n-1 total step count
+   // f(n) = 2^n-1 total step
 
     int orginal= pow(2,n)-1;
 
