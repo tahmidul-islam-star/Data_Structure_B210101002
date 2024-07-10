@@ -12,13 +12,14 @@ void Traverse(int arra[],int n)
     }
     cout<<endl;
 }
-
 void Bubble_sort(int arra[],int n)
 {
     bool ok = false;
 
-    loop
+   for(int i=0;i<n-1;i++)
     {
+        ok= true;
+
         for(int j=0;j<n-i-1;j++)
         {
             if(arra[j]>arra[j+1])
@@ -28,25 +29,28 @@ void Bubble_sort(int arra[],int n)
                 ok =true;
             }
         }
-        if(ok==false) {break;}
+        if(ok) {return;}
     }
-
 }
 int main()
 {
-    int arra[]={2,9,5,4,7,0,8,3};
+   int n;cin>>n;
 
-    int len = sizeof(arra)/sizeof(arra[0]);
+   int arra[n];
 
+   for(int i=0;i<n;i++)
+   {
+       cin>>arra[i];
+   }
     cout<<"Before sorting "<<endl;
 
-    Traverse(arra,len);
+    Traverse(arra,n);
 
-    Bubble_sort(arra,len);
+    Bubble_sort(arra,n);
 
     cout<<"After sorting "<<endl;
 
-    Traverse(arra,len);
+    Traverse(arra,n);
 
     return 0;
 }
