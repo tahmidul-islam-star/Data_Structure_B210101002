@@ -4,12 +4,10 @@ using namespace std;
 
 int main()
 {
-
   string s;
 
   while(cin>>s){
-
-
+    
   int coun1=0,coun2=0;
 
   for(int i=0;i<s.size();i++)
@@ -33,6 +31,5 @@ int main()
   else cout<<"incorrect"<<endl;
   }
   return 0;
-
 }
 
