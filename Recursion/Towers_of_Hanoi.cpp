@@ -11,7 +11,7 @@ void Tower_of_Hanoi(int n, char Beg, char Aux, char End)
 
     if (n == 1)
     {
-        coun++;
+        //coun++;
 
         cout << Beg << "->" << End << endl;
 
@@ -22,7 +22,7 @@ void Tower_of_Hanoi(int n, char Beg, char Aux, char End)
 
     cout << Beg << "->" << End << endl;
 
-    coun++;
+    //coun++;
 
     Tower_of_Hanoi(n - 1, Aux, Beg, End);
 }
